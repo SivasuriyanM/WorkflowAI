@@ -24,7 +24,7 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
-import { ArrowLeft, Play, Save, Settings, Zap, GitBranch, Terminal, HelpCircle, MousePointerSquare, Puzzle, Database, MessageSquare } from "lucide-react";
+import { ArrowLeft, Play, Save, Settings, Zap, GitBranch, Terminal, HelpCircle, MousePointerSquareDashed, Puzzle, Database, MessageSquare } from "lucide-react"; // Changed MousePointerSquare to MousePointerSquareDashed
 import Link from "next/link";
 import { cn } from '@/lib/utils';
 
@@ -87,7 +87,7 @@ const nodePanelItems = [
     { category: "Triggers", items: [
         { id: 'trigger-webhook', type: 'trigger', label: 'Webhook', description: 'Trigger via HTTP request', icon: GitBranch },
         { id: 'trigger-schedule', type: 'trigger', label: 'Schedule', description: 'Run at specific times', icon: Zap },
-        { id: 'trigger-manual', type: 'trigger', label: 'Manual', description: 'Start workflow manually', icon: MousePointerSquare },
+        { id: 'trigger-manual', type: 'trigger', label: 'Manual', description: 'Start workflow manually', icon: MousePointerSquareDashed }, // Changed MousePointerSquare to MousePointerSquareDashed
     ]},
     { category: "Actions", items: [
         { id: 'action-httpRequest', type: 'action', label: 'HTTP Request', description: 'Call external APIs', icon: Terminal },
@@ -151,7 +151,7 @@ export default function NewWorkflowPage() {
       let IconComponent = Puzzle; // Default
       if(iconName === 'GitBranch') IconComponent = GitBranch;
       if(iconName === 'Zap') IconComponent = Zap;
-      if(iconName === 'MousePointerSquare') IconComponent = MousePointerSquare;
+      if(iconName === 'MousePointerSquareDashed') IconComponent = MousePointerSquareDashed; // Changed MousePointerSquare to MousePointerSquareDashed
       if(iconName === 'Terminal') IconComponent = Terminal;
       if(iconName === 'MessageSquare') IconComponent = MessageSquare;
       if(iconName === 'Database') IconComponent = Database;
