@@ -16,7 +16,17 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+       // Allow localhost for development placeholder icons if needed
+      // Remove this if icons are hosted externally in production
+      // {
+      //   protocol: 'http',
+      //   hostname: 'localhost',
+      // },
     ],
+     // Allow SVGs
+    dangerouslyAllowSVG: true,
+    contentDispositionType: 'attachment',
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
 };
 
